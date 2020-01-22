@@ -1,20 +1,19 @@
 class Bacteria {
-  constructor() {
-    this.x = mouseX;
-    this.y = mouseY;
-    this.diameter = 10;
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.diameter = 30;
     this.speed = 1;
     this.color = color(100);
   }
 
   move() {
-    this.x += random(-1, 1);
-    this.y += random(-1, 1);
+    this.x = this.x + random(-1, 1);
+    this.y = this.y + random(-1, 1);
   }
-
-  display() {
+  show() {
     noStroke();
     fill(this.color);
-    ellipse(this.x, this.y, 20);
+    ellipse(this.x, this.y, this.diameter);
   }
 }
