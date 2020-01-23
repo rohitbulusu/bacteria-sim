@@ -8,8 +8,8 @@ class Bacteria {
   }
 
   move() {
-    this.x = this.x + random(-1, 1);
-    this.y = this.y + random(-1, 1);
+    this.x = this.x + random(-0.5, 0.5);
+    this.y = this.y + random(-0.5, 0.5);
   }
   show() {
     noStroke();
