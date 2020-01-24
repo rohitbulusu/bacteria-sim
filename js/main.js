@@ -14,13 +14,17 @@ function setup() {
 function draw() {
   background(217, 228, 229);
   ms = millis();
-  text(`Elapsed Time: ${currentTime(ms)}`, 20, 30);
+
   //Display bugs
   for (let i = 0; i < bugs.length; i++) {
     bugs[i].show();
     bugs[i].move();
   }
   canvas.mousePressed(createBug);
+
+  //Display Stats
+  text(`Elapsed Time: ${currentTime(ms)}`, 20, 30);
+  text(`Bacteria count: ${bugs.length}`, 20, 50);
 }
 
 const createBug = () => {
