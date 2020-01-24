@@ -16,4 +16,11 @@ class Bacteria {
     fill(this.color);
     ellipse(this.x, this.y, this.diameter);
   }
+  // wasClicked() {
+  //   if (dist(mouseX, mouseY, this.x, this.y) <= this.diameter) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 }
